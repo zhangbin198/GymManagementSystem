@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑修改会员信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<body>
+<div class="layui-form" lay-filter="useradmin" id="useradmin">
+    <div class="layui-container" style="margin-top:60px">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员账号</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberAccount" id="memberAccount" class="layui-input" readonly/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="memberName" id="memberName" placeholder="请输入会员姓名" class="layui-input"
+                               placeholder="请输入会员姓名"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员性别</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="memberGender" id="memberGender" placeholder="请输入会员性别"
+                               class="layui-input"
+                               placeholder="请输入会员性别"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员年龄</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberAge" id="memberAge" class="layui-input"
+                               placeholder="请输入会员年龄"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员身高</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberHeight" id="memberHeight" class="layui-input"
+                               placeholder="请输入会员身高"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员体重</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberWeight" id="memberWeight" class="layui-input"
+                               placeholder="请输入会员体重"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员电话</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberPhone" id="memberPhone" class="layui-input"
+                               placeholder="请输入会员电话"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;购买课时</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="cardClass" id="cardClass" class="layui-input"
+                               placeholder="请输入购买课时"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;剩余课时</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="cardNextClass" id="cardNextClass" class="layui-input"
+                               placeholder="请输入剩余课时"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

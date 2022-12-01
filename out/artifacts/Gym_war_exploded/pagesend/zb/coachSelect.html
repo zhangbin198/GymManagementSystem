@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询所有教练</title>
+</head>
+<!--layUi-->
+<script src="../statics/layui/layui.js"></script>
+<link rel="stylesheet" href="../statics/layui/css/layui.css">
+<script src="../statics/js/jquery.js"></script>
+<!--查询员工信息js-->
+<script src="../statics/js/zb/selectCoach.js"></script>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <fieldset class="table-search-fieldset">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">教练编号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="coachId" autocomplete="off" class="layui-input" id="coachId"
+                                   placeholder="请输入教练编号">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">教练姓名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="coachName" autocomplete="off" class="layui-input" id="coachName"
+                                   placeholder="请输入教练姓名">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">发布课程名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="coachField" autocomplete="off" class="layui-input" id="coachField"
+                                   placeholder="请输入发布课程名">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">教练阶级</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="coachSaff" autocomplete="off" class="layui-input" id="coachSaff"
+                                   placeholder="请输入教练阶级">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn layui-btn-primary" lay-submit
+                                lay-filter="data-search-btn" onclick="select()"><i class="layui-icon"></i> 搜 索
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除</button>
+            </div>
+        </script>
+    </div>
+</div>
+<table id="demo" lay-filter="test"></table>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+</body>
+</html>

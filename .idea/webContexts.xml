@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/Gym/web/admin.html" value="file://$PROJECT_DIR$/Gym/web" />
+        <entry key="file://$PROJECT_DIR$/Gym/web/demo.jsp" value="file://$PROJECT_DIR$/Gym/web" />
+        <entry key="file://$PROJECT_DIR$/Gym/web/gymcss/index.html" value="file://$PROJECT_DIR$/Gym/web/gymcss" />
+        <entry key="file://$PROJECT_DIR$/Gym/web/index.html" value="file://$PROJECT_DIR$/Gym/web" />
+        <entry key="file://$PROJECT_DIR$/Gym/web/login.html" value="file://$PROJECT_DIR$/Gym/web" />
+        <entry key="file://$PROJECT_DIR$/Gym/web/pagesend/lyy/classTableUStuUpload.jsp" value="file://$PROJECT_DIR$/Gym/web/pagesend/lyy" />
+        <entry key="file://$PROJECT_DIR$/Gym/web/pagesend/zb/coachScoreAdd.html" value="file://$PROJECT_DIR$/Gym/web/pagesend/zb" />
+      </map>
+    </option>
+  </component>
+</project>

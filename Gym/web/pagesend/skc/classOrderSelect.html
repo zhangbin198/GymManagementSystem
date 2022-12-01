@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询所有报名信息</title>
+</head>
+<!--layUi-->
+<script src="../statics/layui/layui.js"></script>
+<link rel="stylesheet" href="../statics/layui/css/layui.css">
+<script src="../statics/js/jquery.js"></script>
+<!--查询报名信息js-->
+<script src="../statics/js/skc/skcSelectClassOrder.js"></script>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="table-search-fieldset">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">报名编号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="classOrderId" autocomplete="off" class="layui-input"
+                                   id="classOrderId"
+                                   placeholder="请输入报名编号">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">报名名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="className" autocomplete="off" class="layui-input" id="className"
+                                   placeholder="请输入报名名称">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">报名教练</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="classCoach" autocomplete="off" class="layui-input" id="classCoach"
+                                   placeholder="请输入报名教练">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">报名电话</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="classPhone" autocomplete="off" class="layui-input" id="classPhone"
+                                   placeholder="请输入报名电话">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn layui-btn-primary" lay-submit
+                                lay-filter="data-search-btn" onclick="select()"><i class="layui-icon"></i> 搜 索
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<table id="demo" lay-filter="test"></table>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+</body>
+</html>

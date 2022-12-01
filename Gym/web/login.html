@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>健身房管理系统登录界面</title>
+</head>
+<style>
+    .huoqu {
+        background: #F9F9F9;
+        border: 1px solid #2CB9EA;
+        color: #2CB9EA;
+        padding: 12px 10px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: 0
+    }
+
+    .huoqu:hover {
+        background: #2CB9EA;
+        color: #fff
+    }
+</style>
+<!--layUi-->
+<link rel="stylesheet" href="pagesend/statics/layui/css/layui.css"/>
+<script src="pagesend/statics/layui/layui.js"></script>
+<script src="pagesend/statics/js/jquery.js"></script>
+<!--登录界面样式-->
+<link rel="stylesheet" href="pagesend/statics/css/login.css">
+<!--粒子效果-->
+<script src="pagesend/statics/js/background.js"></script>
+<!--注册-->
+<script src="pagesend/statics/js/login.js"></script>
+w
+<body>
+<canvas id="J_dotLine" style="z-index:0;position: fixed;left: 0;top: 0;"></canvas>
+<div class="box">
+    <div class="pre-box">
+        <h1>WELCOME</h1>
+        <p>JOIN US!</p>
+        <div class="img-box">
+            <img src="pagesend/statics/images/background.jpeg">
+        </div>
+    </div>
+    <!--注册的盒子-->
+    <div class="register-form">
+        <div class="title-box">
+            <h1>注册</h1>
+        </div>
+        <!--输入框的盒子-->
+        <div class="input-box" method="post">
+            <input type="text" placeholder="请输入用户名" name="username" required/>
+            <input type="password" placeholder="请输入密码" name="password" required/>
+            <input type="password" placeholder="请输入确认密码" name="passwords" required/>
+        </div>
+        <!--按钮盒子-->
+        <div class="btn-box">
+            <button onclick="zhuce()">注册</button>
+            <!--绑定点击事件-->
+            <p onclick="mySwith()">已有账号?去登录</p>
+        </div>
+    </div>
+    <!--登录盒子-->
+    <div class="login-form">
+        <form id="loginForm" action="codeLogin.do" method="post" class="layui-form">
+            <!--标题盒子-->
+            <div class="title-box">
+                <h1>登录</h1>
+            </div>
+            <!--输入框盒子-->
+            <div class="input-box">
+                <input type="text" placeholder="请输入用户名" name="username" id="username" lay-verify="required"
+                       lay-reqtext="用户名，岂能为空？"/>
+                <input type="password" placeholder="请输入密码" name="password" id="password" lay-verify="required"
+                       lay-reqtext="密码，岂能为空？"/>
+                <input class="mobile" name="mobile" type="text" placeholder="请输入手机号" id="mobile" lay-verify="required"
+                       lay-reqtext="手机号，岂能为空？"/>
+                <input class="code" type="text" name="code" placeholder="请输入验证码" id="code" lay-verify="required"
+                       lay-reqtext="验证码，岂能为空？"/>
+                <input class="huoqu" id="zphone" type="button" value=" 获取验证码 " onclick="get_mobile_code()">
+                <div>
+                    <input type="radio" name="entity" value="管理员" title="管理员" checked>
+                    <input type="radio" name="entity" value="教练" title="教练">
+                    <input type="radio" name="entity" value="会员" title="会员">
+                </div>
+            </div>
+            <!--按钮盒子-->
+            <div class="btn-box">
+                <button type="submit" id="embed-submit">登录</button>
+                <!--绑定点击事件-->
+                <p onclick="mySwith()">没有账号?去注册</p>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+<script src="pagesend/statics/js/jquery.js"></script>
+<script src="pagesend/statics/js/gVerify.js"></script>
+<script type="text/javascript">
+     function get_mobile_code() {
+         var mobile = $("#loginForm").get(0).mobile.value;
+         console.log(mobile)
+         let reg = /^1[3-9]\d{9}$/; //手机号正则
+         if (!reg.test(mobile)) {
+             layer.alert("请输入正确的手机号", {icon: 5});
+             return false;
+         }
+         //调用后台servlet 发送短信 生成验证码
+         $.post('createCode.do', {mobile: mobile}, function (data) {
+             console.log(data);
+             if (data == "true") {
+                 remainTime();
+             } else {
+                 layer.alert("短信发送失败，请联系管理员", {icon: 5});
+                 return false;
+             }
+         }, "text");
+     }
+
+     $("#embed-submit").click(function (e) {
+         let mobile = $("#loginForm").get(0).mobile.value;
+         let reg = /^1[3-9]\d{9}$/; //手机号正则
+         if (!reg.test(mobile)) {
+             layer.alert("手机号码格式不匹配", {icon: 5});
+             return false;
+         }
+     });
+     var iTime = 59;
+     var Account;
+
+     function remainTime() {
+         document.getElementById('zphone').disabled = true;
+         var iSecond, sSecond = "", sTime = "";
+         if (iTime >= 0) {
+             iSecond = parseInt(iTime % 60);
+             iMinute = parseInt(iTime / 60)
+             if (iSecond >= 0) {
+                 if (iMinute > 0) {
+                     sSecond = iMinute + "分" + iSecond + "秒";
+                 } else {
+                     sSecond = iSecond + "秒";
+                 }
+             }
+             sTime = sSecond;
+             if (iTime == 0) {
+                 clearTimeout(Account);
+                 sTime = '获取手机验证码';
+                 iTime = 59;
+                 document.getElementById('zphone').disabled = false;
+             } else {
+                 Account = setTimeout("remainTime()", 1000);
+                 iTime = iTime - 1;
+             }
+         } else {
+             sTime = '没有倒计时';
+         }
+         document.getElementById('zphone').value = sTime;
+     }
+</script>
+</body>
+</html>

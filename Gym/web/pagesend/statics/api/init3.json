@@ -1,0 +1,47 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": ""
+  },
+  "logoInfo": {
+    "title": "COACH",
+    "image": "pagesend/statics/images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "教练发布课程",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            {
+              "title": "课程列表",
+              "href": "pagesend/lyy/classTableSelect2.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "给学员打分",
+              "href": "pagesend/zb/coachScoreSelect.jsp",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "下载&查看学生作品",
+              "href": "pagesend/zb/coachdownLoad.jsp",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

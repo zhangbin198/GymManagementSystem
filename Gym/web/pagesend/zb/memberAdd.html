@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加会员信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<script src="../statics/js/jquery.js"></script>
+<!--添加会员信息-->
+<script src="../statics/js/zb/addMember.js"></script>
+<body>
+<form class="layui-form" action="">
+    <div class="layui-container" style="margin-top:200px">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="memberName" id="memberName" placeholder="请输入会员姓名" class="layui-input"
+                               lay-verify="required" lay-reqtext="会员姓名，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员性别</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="memberGender" id="memberGender" placeholder="请输入会员性别"
+                               class="layui-input" lay-verify="required" lay-reqtext="会员性别，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员年龄</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberAge" id="memberAge" class="layui-input" placeholder="请输入会员年龄"
+                               lay-verify="required" lay-reqtext="会员年龄，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员身高</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberHeight" id="memberHeight" class="layui-input"
+                               placeholder="请输入会员身高" lay-verify="required" lay-reqtext="会员身高，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员体重</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberWeight" id="memberWeight" placeholder="请输入会员体重"
+                               class="layui-input" lay-verify="required" lay-reqtext="会员体重，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;会员电话</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="memberPhone" id="memberPhone" placeholder="请输入会员电话"
+                               class="layui-input" lay-verify="required" lay-reqtext="会员电话，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;购买课时</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="cardClass" id="cardClass" placeholder="请输入购买课时" class="layui-input"
+                               lay-verify="required" lay-reqtext="购买课时，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;剩余课时</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="cardNextClass" id="cardNextClass" placeholder="请输入剩余课时"
+                               class="layui-input" lay-verify="required" lay-reqtext="剩余课时，岂能为空？"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" type="submit" lay-submit lay-filter="formDemo"
+                                onclick="submitMember()">立即提交
+                        </button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

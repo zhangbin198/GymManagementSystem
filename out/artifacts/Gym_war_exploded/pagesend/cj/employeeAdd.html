@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加员工信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<script src="../statics/js/jquery.js"></script>
+<script src="../statics/js/cj/addEmployee.js"></script>
+<body>
+<form class="layui-form" action="">
+    <div class="layui-form" lay-filter="useradmin" id="useradmin">
+        <div class="layui-container" style="margin-top:200px">
+            <div class="layui-row">
+                <div class="layui-col-md6 layui-col-md-offset3">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;员工姓名</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="employeeName" id="employeeName" placeholder="请输入员工姓名"
+                                   class="layui-input" lay-verify="required" lay-reqtext="员工姓名，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;员工性别</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="employeeGender" id="employeeGender" placeholder="请输入员工性别"
+                                   class="layui-input" lay-verify="required" lay-reqtext="员工性别，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;员工年龄</label>
+                        <div class="layui-input-block">
+                            <input type="number" name="employeeAge" id="employeeAge" placeholder="请输入员工年龄"
+                                   class="layui-input" lay-verify="required" lay-reqtext="员工年龄岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;员工入职时间</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="entryTime" id="entryTime" class="layui-input"
+                                   placeholder="请输入员工入职时间" lay-verify="required" lay-reqtext="员工入职时间，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;职务</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="staff" id="staff" class="layui-input"
+                                   placeholder="请输入职务" lay-verify="required" lay-reqtext="员工职务，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;备注信息</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="employeeMessage" id="employeeMessage" class="layui-input"
+                                   placeholder="请输入备注信息" lay-verify="required" lay-reqtext="备注信息，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" type="submit" lay-submit lay-filter="formDemo"
+                                    onclick="submitEmployee()">立即提交
+                            </button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,187 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "pagesend/zb/welcome-1.html?"
+  },
+  "logoInfo": {
+    "title": "LEXGYM",
+    "image": "pagesend/statics/images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "会员管理",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            {
+              "title": "会员查询",
+              "href": "pagesend/zb/membersSelect.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "会员添加",
+              "href": "pagesend/zb/memberAdd.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "器材管理",
+          "href": "",
+          "icon": "fa fa-window-maximize",
+          "target": "_self",
+          "child": [
+            {
+              "title": "器材查询",
+              "href": "pagesend/lz/equipmentSelect.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "器材添加",
+              "href": "pagesend/lz/equipmentAdd.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "报名管理",
+          "href": "",
+          "icon": "fa fa-gears",
+          "target": "_self",
+          "child": [
+            {
+              "title": "报名查询",
+              "href": "pagesend/skc/classOrderSelect.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "报名添加",
+              "href": "pagesend/skc/classOrderAdd.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "员工管理",
+          "href": "",
+          "icon": "fa fa-file-text",
+          "target": "_self",
+          "child": [
+            {
+              "title": "员工查询",
+              "href": "pagesend/cj/employeeSelect.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "员工添加",
+              "href": "pagesend/cj/employeeAdd.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "课程管理",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "课程查询",
+              "href": "pagesend/lyy/classTableSelect.html",
+              "icon": "fa fa-list-alt",
+              "target": "_self"
+            },
+            {
+              "title": "课程添加",
+              "href": "pagesend/lyy/classTableAdd.html",
+              "icon": "fa fa-navicon",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "入账管理",
+          "href": "",
+          "icon": "fa fa-flag-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "入账查询",
+              "href": "pagesend/zb/bookedSelect.html",
+              "icon": "fa fa-stumbleupon-circle",
+              "target": "_self"
+            },
+            {
+              "title": "入账添加",
+              "href": "pagesend/zb/bookedAdd.html",
+              "icon": "fa fa-viacoin",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "留言管理",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            {
+              "title": "留言查询",
+              "href": "pagesend/zb/leaveMessagesSelect.html",
+              "icon": "fa fa-hourglass-end",
+              "target": "_self"
+            },
+            {
+              "title": "留言添加",
+              "href": "pagesend/zb/leaveMessageAdd.html",
+              "icon": "fa fa-hourglass-end",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "健身统计",
+          "href": "",
+          "icon": "fa fa-snowflake-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "销售额会员统计",
+              "href": "pagesend/zb/statisticalFigure.html",
+              "icon": "fa fa-snowflake-o",
+              "target": "_self"
+            },
+            {
+              "title": "用户身体情况统计",
+              "href": "pagesend/zb/statisticalFigure2.html",
+              "icon": "fa fa-shield",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "销售支付",
+          "href": "pagesend/zb/index.jsp",
+          "icon": "fa fa-snowflake-o",
+          "target": "_self"
+        }
+      ]
+    }
+  ]
+}

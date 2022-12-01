@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑器材信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<body>
+<div class="layui-form" lay-filter="useradmin" id="useradmin">
+    <div class="layui-container" style="margin-top:200px">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材编号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="equipmentId" id="equipmentId" class="layui-input" readonly/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="equipmentName" id="equipmentName" class="layui-input"
+                               placeholder="请输入器材名称"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材位置</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="equipmentLocation" id="equipmentLocation" class="layui-input"
+                               placeholder="请输入器材位置"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材状态</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="equipmentStatus" id="equipmentStatus" class="layui-input"
+                               placeholder="请输入器材状态"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材备注信息</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="equipmentMessage" id="equipmentMessage" class="layui-input"
+                               placeholder="请输入器材备注信息"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

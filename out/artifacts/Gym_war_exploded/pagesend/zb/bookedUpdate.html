@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑入账信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<body>
+<div class="layui-form" lay-filter="useradmin" id="useradmin">
+    <div class="layui-container" style="margin-top:200px">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;账单编号</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="billId" id="billId" class="layui-input" readonly/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;用户账号</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="billingAccount" id="billingAccount"
+                               placeholder="请输入用户账号"
+                               class="layui-input" lay-verify="required"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;用户姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="billName" id="billName"
+                               placeholder="请输入用户姓名"
+                               class="layui-input" lay-verify="required"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;是否会员</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="whetherMembers" id="whetherMembers"
+                               placeholder="请输入是否会员"
+                               class="layui-input" lay-verify="required"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;账单金额</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="billMoney" id="billMoney" class="layui-input"
+                               placeholder="请输入账单金额"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;账单备注</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="billNotel" id="billNotel" class="layui-input"
+                               placeholder="请输入账单备注"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;消费去处</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="consumerPlace" id="consumerPlace" class="layui-input"
+                               placeholder="请输入消费去处"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

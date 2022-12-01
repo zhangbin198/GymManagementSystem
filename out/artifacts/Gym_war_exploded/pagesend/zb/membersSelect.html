@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询所有会员信息</title>
+    <!--layUi-->
+    <script src="../statics/layui/layui.js"></script>
+    <link rel="stylesheet" href="../statics/layui/css/layui.css">
+    <script src="../statics/js/jquery.js"></script>
+    <!--显示所有会员信息修改和编辑-->
+    <script src="../statics/js/zb/selectMember.js"></script>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <fieldset class="table-search-fieldset">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">会员账号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="memberAccount" class="layui-input" id="memberAccount"
+                                   placeholder="请输入会员账号">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">会员姓名</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="memberName" class="layui-input" id="memberName"
+                                   placeholder="请输入会员姓名">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">会员电话</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="memberPhone" class="layui-input" id="memberPhone"
+                                   placeholder="请输入会员电话">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">办卡时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="cardTime" class="layui-input" id="cardTime"
+                                   placeholder="请输入办卡时间">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn layui-btn-primary" lay-submit
+                                lay-filter="data-search-btn" onclick="select()"><i class="layui-icon"></i> 搜 索
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<table id="demo" lay-filter="test"></table>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+</body>
+</html>

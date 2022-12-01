@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑教练信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<body>
+<div class="layui-form" lay-filter="useradmin" id="useradmin">
+    <div class="layui-container" style="margin-top:200px">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;教练编号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="coachId" id="coachId" class="layui-input" readonly/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;教练姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="coachName" id="coachName"
+                               placeholder="请输入教练姓名"
+                               class="layui-input" lay-verify="required"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;教练性别</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="coachGender" id="coachGender"
+                               placeholder="请输入教练性别"
+                               class="layui-input" lay-verify="required"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;教练年龄</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="coachAge" id="coachAge"
+                               placeholder="请输入教练年龄"
+                               class="layui-input" lay-verify="required"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;发布课程名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="coachField" id="coachField" class="layui-input"
+                               placeholder="请输入发布课程名"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;教练阶级</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="coachSaff" id="coachSaff" class="layui-input"
+                               placeholder="请输入教练阶级"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

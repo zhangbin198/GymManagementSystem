@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>器材添加</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<script src="../statics/js/jquery.js"></script>
+<!--添加器材信息-->
+<script src="../statics/js/lz/addEquipment.js"></script>
+<body>
+<form action="" class="layui-form">
+    <div class="layui-form" lay-filter="useradmin" id="useradmin">
+        <div class="layui-container" style="margin-top:200px">
+            <div class="layui-row">
+                <div class="layui-col-md6 layui-col-md-offset3">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="equipmentName" id="equipmentName" placeholder="请输入器材名称"
+                                   class="layui-input" lay-verify="required" lay-reqtext="器材名称，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材位置</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="equipmentLocation" id="equipmentLocation" placeholder="请输入器材位置"
+                                   class="layui-input" lay-verify="required" lay-reqtext="器材位置，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材状态</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="equipmentStatus" id="equipmentStatus" placeholder="请输入器材状态"
+                                   class="layui-input" lay-verify="required" lay-reqtext="器材状态岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;器材备注信息</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="equipmentMessage" id="equipmentMessage" class="layui-input"
+                                   placeholder="请输入器材备注信息" lay-verify="required" lay-reqtext="器材备注信息岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" type="submit" lay-submit lay-filter="formDemo"
+                                    onclick="submitEquipment()">立即提交
+                            </button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

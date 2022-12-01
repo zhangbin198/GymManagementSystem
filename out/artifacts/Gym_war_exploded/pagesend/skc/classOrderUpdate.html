@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改报名信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<body>
+<div class="layui-form" lay-filter="useradmin" id="useradmin">
+    <div class="layui-container" style="margin-top:200px">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名编号</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="classOrderId" id="classOrderId" class="layui-input" readonly/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="className" id="className" class="layui-input"
+                               placeholder="请输入报名名称"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名电话</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="classPhone" id="classPhone" class="layui-input"
+                               placeholder="请输入报名电话"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名课程</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="classTable" id="classTable" class="layui-input"
+                               placeholder="报名课程"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名教练</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="classCoach" id="classCoach" class="layui-input"
+                               placeholder="报名教练"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询所有器材信息</title>
+</head>
+<!--layUi-->
+<script src="../statics/layui/layui.js"></script>
+<link rel="stylesheet" href="../statics/layui/css/layui.css">
+<script src="../statics/js/jquery.js"></script>
+<!--器材信息显示编辑修改js-->
+<script src="../statics/js/lz/selectEquipment.js"></script>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="table-search-fieldset">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">器材编号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="equipmentId" autocomplete="off" class="layui-input"
+                                   id="equipmentId" placeholder="请输入器材编号">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">器材名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="equipmentName" autocomplete="off" class="layui-input"
+                                   id="equipmentName" placeholder="请输入器材名称">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">器材位置</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="equipmentLocation" autocomplete="off" class="layui-input"
+                                   id="equipmentLocation" placeholder="请输入器材位置">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">器材状态</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="equipmentStatus" autocomplete="off" class="layui-input"
+                                   id="equipmentStatus" placeholder="请输入器材状态">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn layui-btn-primary" lay-submit
+                                lay-filter="data-search-btn" onclick="select()"><i class="layui-icon"></i> 搜 索
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<table id="demo" lay-filter="test"></table>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+</body>
+</html>

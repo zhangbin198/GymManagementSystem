@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加报名信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<script src="../statics/js/jquery.js"></script>
+<!--添加报名信息-->
+<script src="../statics/js/skc/skcAddClassOrder.js"></script>
+<body>
+<form class="layui-form" action="">
+    <div class="layui-form" lay-filter="useradmin" id="useradmin">
+        <div class="layui-container" style="margin-top:200px">
+            <div class="layui-row">
+                <div class="layui-col-md6 layui-col-md-offset3">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="className" id="className" placeholder="请输入报名名称"
+                                   class="layui-input" lay-verify="required" lay-reqtext="报名名称，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名电话</label>
+                        <div class="layui-input-block">
+                            <input type="number" name="classPhone" id="classPhone" placeholder="请输入报名电话"
+                                   class="layui-input" lay-verify="required" lay-reqtext="报名电话，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名课程</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="classTable" id="classTable" class="layui-input"
+                                   placeholder="请输入报名课程" lay-verify="required" lay-reqtext="报名课程，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;报名教练</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="classCoach" id="classCoach" class="layui-input"
+                                   placeholder="请输入报名教练" lay-verify="required" lay-reqtext="报名教练，岂能为空？"/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" type="submit" lay-submit lay-filter="formDemo"
+                                    onclick="submitClassOrder()">立即提交
+                            </button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    //Demo
+    layui.use('form', function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

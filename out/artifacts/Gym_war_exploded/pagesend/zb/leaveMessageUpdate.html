@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑留言信息</title>
+</head>
+<!--layUi-->
+<link rel="stylesheet" href="../statics/layui/css/layui.css"/>
+<script src="../statics/layui/layui.js"></script>
+<body>
+<div class="layui-form" lay-filter="useradmin" id="useradmin">
+    <div class="layui-container" style="margin-top:200px">
+        <div class="layui-row">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;留言编号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="leavemessageId" id="leavemessageId" class="layui-input" readonly/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;留言用户姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="leavemessageUser" id="leavemessageUser" class="layui-input"
+                               placeholder="请输入留言用户姓名"/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;留言内容</label>
+                    <div class="layui-input-block">
+                        <textarea name="leavemessageContent" id="leavemessageContent" class="layui-textarea"
+                                  placeholder="请输入留言内容" rows="10" style="resize:none;"
+                                  lay-verify="required" lay-reqtext="留言内容，岂能为空？"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i style="color: red">*</i>&nbsp;&nbsp;留言手机号码</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="leavemessagePhone" id="leavemessagePhone" class="layui-input"
+                               placeholder="留言手机号码"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
